@@ -1,0 +1,56 @@
+:root{--bg:#FBF7F4;--ink:#241A17;--muted:#7a6a63;--rose:#B23A5A;--card:#fff;--line:#ecdfd8}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;margin:0;line-height:1.1}
+a{color:inherit}:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:18px;justify-content:space-between;padding:14px 26px;background:var(--bg);border-bottom:1px solid var(--line)}
+.mark{font-family:"Playfair Display",serif;font-weight:700;text-decoration:none;font-size:1.15rem;white-space:nowrap}
+.mark span{font-weight:400;font-style:italic;color:var(--rose)}
+.bar nav{display:flex;gap:22px}.bar nav a{text-decoration:none;color:var(--muted);font-size:.94rem}.bar nav a:hover{color:var(--ink)}
+.lang{border:1.5px solid var(--rose);color:var(--rose);background:none;border-radius:999px;padding:4px 13px;font:inherit;font-weight:600;cursor:pointer}
+.btn{display:inline-block;background:var(--rose);color:#fff;padding:13px 26px;border-radius:999px;border:0;text-decoration:none;font:inherit;font-weight:600;cursor:pointer}
+.btn.alt{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:0;max-width:1180px;margin:0 auto}
+.hero-photo img{width:100%;height:520px;object-fit:cover;display:block;border-radius:0 0 0 0}
+.hero-text{padding:40px 44px}
+.kicker{color:var(--rose);font-weight:600;letter-spacing:.08em;font-size:.82rem;margin:0 0 14px}
+.hero h1{font-size:clamp(2.4rem,5.5vw,3.6rem)}
+.lede{color:var(--muted);max-width:36ch;margin:18px 0 30px;font-size:1.08rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:80px 26px;max-width:1180px;margin:0 auto}
+section h2{font-size:clamp(2rem,5vw,2.9rem);text-align:center}
+.rule{width:58px;height:3px;background:var(--rose);margin:16px auto 8px;border-radius:2px}
+.sub{text-align:center;color:var(--muted);max-width:52ch;margin:8px auto 40px}
+.servizi h2{margin-bottom:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.grid3 article{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(36,26,23,.08)}
+.grid3 img{width:100%;height:200px;object-fit:cover;display:block}
+.grid3 h3{font-size:1.35rem;padding:18px 20px 4px}
+.grid3 p{margin:0;padding:0 20px 22px;color:var(--muted);font-size:.93rem}
+.grid3 .nails{display:flex;flex-direction:column;justify-content:center;background:var(--rose);color:#fff;text-align:center;padding:30px 20px}
+.grid3 .nails h3{color:#fff;padding:0 0 8px}
+.grid3 .nails p{color:#fadde4;padding:0}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:34px}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;display:block}
+.galleria{text-align:center}
+.contatti{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.info ul{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:20px}
+.info b{display:block;font-size:.78rem;letter-spacing:.06em;color:var(--rose);margin-bottom:4px;text-transform:uppercase}
+.info a{color:var(--rose);text-decoration:none}
+form{background:var(--card);border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(36,26,23,.1);display:grid;gap:14px}
+form h3{font-size:1.35rem}
+label{display:grid;gap:6px;font-size:.88rem;font-weight:500}
+input,select,textarea{font:inherit;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+#status{margin:0;font-size:.9rem;color:var(--muted)}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:26px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:860px){
+ .hero{grid-template-columns:1fr}
+ .hero-photo img{height:320px}
+ .hero-text{padding:32px 24px}
+ .grid3{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr 1fr}
+ .contatti{grid-template-columns:1fr}
+ .bar nav{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
